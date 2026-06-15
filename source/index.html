@@ -1,4 +1,251 @@
 <!DOCTYPE html>
 <html class='page' lang="ru">
 
+<head>
+  <meta charset="UTF-8">
+  <title>Портфолио</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo logo">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="#" type="image/svg+xml" width="74" height="62">
+          <img class="logo__pic" src="#" alt="" width="27" height="27">
+        </picture>
+      </a>
+      <nav class="page-header__navigation page-nav">
+        <div class="page-nav__wrapper">
+          <button class="page-nav__toggle button-burger" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="page-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link">Мой путь</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link">Навыки</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link">Проекты</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="site-list__link">Контакт</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="page-lang__wrapper">
+        <button class="page-lang__toggle">RU</button>
+        <button class="page-lang__toggle">ENG</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <section class="hero">
+      <a class="hero__wrapper">
+        <h2 class="hero__title">Привет! Я Злата и я начинающий frontend-разработчик</h2>
+        <ul class="hero__list qualities-list">
+          <li class="qualities-list__item">UI lover</li>
+          <li class="qualities-list__item">visual thinker</li>
+          <li class="qualities-list__item">creativity</li>
+          <li class="qualities-list__item">curiosity</li>
+        </ul>
+        <div class="hero-pic__wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" width="503" height="370" type="image/webp" srcset="#">
+            <source media="(min-width: 768px)" width="708" height="609" type="image/webp" srcset="#">
+            <img class="hero__pic" src="#" srcset="#" alt="Профессиональное селфи" width="190" height="142">
+          </picture>
+        </div>
+        <a class="hero-link" href="https://github.com/Golldiie">
+          <span class="visually-hidden">Переход на GitHub</span>
+          <span class="hero-link__message hero-link__message--mobile">Клик!</span>
+          <span class="hero-link__message hero-link__message--desktop">Счастливого путешествия на GitHub</span>
+          <picture>
+            <source media="(min-width: 1440px)" width="503" height="370" type="image/webp" srcset="#">
+            <img class="hero-link__pic" alt="GitHub-котик" width="95" height="95">
+          </picture>
+        </a>
+        <ul class="hero-stack__list short-stack">
+          <li class="short-stack__item">HTML</li>
+          <li class="short-stack__item">CSS</li>
+          <li class="short-stack__item">JavaScript</li>
+          <li class="short-stack__item">Git</li>
+          <li class="short-stack__item">Figma</li>
+        </ul>
+        </div>
+    </section>
+
+    <section class="path">
+      <div class="path__wrapper">
+        <h2 class="path__title">Мой путь</h2>
+        <div class="path-direction--short">
+          <h3 class="path-direction__title">Короче</h3>
+          <ol class="path-direction__list">
+            <li class="path-direction__item">Tilda 11 класс</li>
+            <li class="path-direction__item">ВУЗ (преподаватель английский + французский) = frontend</li>
+            <li class="path-direction__item">Тренажёры, учебники, курс</li>
+            <li class="path-direction__item">Пет-проектики</li>
+          </ol>
+        </div>
+        <div class="path-direction--long">
+          <img class="path-direction__pic" alt="Кото-машинка" width="55" height="77">
+          <h3 class="path-direction__title">Длиннее</h3>
+          <button class="tooltip" type="button">
+            <span class="tooltip__message">Внимание! Длинный текст</span>
+          </button>
+          <div class="path-direction__text-wrapper">
+            <button class="path-direction__text-button" type="button">Длиннее</button>
+            <p class="path-direction__text">
+              Всё началось со школы. На уроках информатики нас начали знакомить с вёрсткой сайтов.
+              Рассказали про HTML, показали Tilda. Я заинтересовалась, захотела стать программистом и...всё.
+              Отложила идею в долгий ящик, т.к. побоялась пойти на техническую специальность в вузе.
+              Ведь я же гуманитарий!!
+              Проучившись 4 года я поняла, что это не моё, меня тянет к другому.
+              К чему я боялась подойти из-за “гуманитарного мышления”.
+              Напротяжении полугода (и по сей день) я исследую океан фронтенда.
+              Может прозвучит банально, но кажется, это моё дело.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills">
+      <div class="skills__wrapper">
+        <h2 class="skills__title">Навыки</h2>
+        <ul class="skills-list">
+          <li class="skills-list__item">JS
+            <ul class="JS-list">
+              <li class="JS-list__item">DOM</li>
+              <li class="JS-list__item">API</li>
+              <li class="JS-list__item">Async</li>
+              <li class="JS-list__item">Events</li>
+              <li class="JS-list__item">ES6+</li>
+            </ul>
+          </li>
+          <li class="skills-list__item">HTML
+            <ul class="HTML-list">
+              <li class="HTML-list__item">Semantics</li>
+              <li class="HTML-list__item">Accessibility</li>
+              <li class="HTML-list__item">Forms</li>
+            </ul>
+          </li>
+          <li class="skills-list__item">CSS
+            <ul class="CSS-list">
+              <li class="CSS-list__item">SASS</li>
+              <li class="CSS-list__item">Flexbox</li>
+              <li class="CSS-list__item">Grid</li>
+              <li class="CSS-list__item">Adaptive</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="projects" aria-labelledby="projects-title">
+      <div class="projects__wrapper">
+        <h2 class="projects__title" id="projects-title">Проекты</h2>
+
+        <ol class="projects__list">
+          <li class="projects__item">
+            <h3>Первый одностраничник</h3>
+            <article class="project-card">
+              <button class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-1"></button>
+              <h4 class="preview__title">Sedona</h4>
+              <ul class="preview__stack-list stack-list">
+                <li class="stack-list__item">HTML</li>
+                <li class="stack-list__item">CSS</li>
+              </ul>
+
+              <ul class="preview__learned-list learned-list">
+                <li class="learned-list__item">Семантика HTML</li>
+                <li class="learned-list__item">Формы</li>
+                <li class="learned-list__item">Модальные окна</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="projects__item">
+            <h3>Знакомство с адаптивом + JS</h3>
+            <article class="project-card">
+              <button class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-1"></button>
+              <h4 class="preview__title">Cat Energy</h4>
+              <ul class="preview__stack-list stack-list">
+                <li class="stack-list__item">HTML</li>
+                <li class="stack-list__item">CSS</li>
+                <li class="stack-list__item">Gulp</li>
+              </ul>
+
+              <ul class="preview__learned-list learned-list">
+                <li class="learned-list__item">БЭМ</li>
+                <li class="learned-list__item">Адаптивная вёрстка</li>
+                <li class="learned-list__item">Gulp-сборка</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="projects__item">
+            <h3>Базовый JS</h3>
+            <article class="project-card">
+              <button class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-1"></button>
+              <h4 class="preview__title">Kekstagram</h4>
+              <ul class="preview__stack-list stack-list">
+                <li class="stack-list__item">HTML</li>
+                <li class="stack-list__item">CSS</li>
+                <li class="stack-list__item">JS</li>
+              </ul>
+
+              <ul class="preview__learned-list learned-list">
+                <li class="learned-list__item">Fetch API</li>
+                <li class="learned-list__item">ES modules</li>
+                <li class="learned-list__item">Валидация форм</li>
+              </ul>
+            </article>
+          </li>
+          <li class="projects__item">
+            <h3>Мы здесь</h3>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page__footer">
+    <section class="contacts">
+      <h2 class="visually-hidden">Связаться со мной</h2>
+      <div class="contacts__wrapper">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--vk" href="https://vk.com/zzm00n">VK</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--tg" href="@uwiwi2">Telegram</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--github" href="https://github.com/Golldiie">GitHub</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div class="project-modal hidden" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <div class="project-modal__inner">
+      <button class="project-modal__close" type="button">Закрыть</button>
+
+      <img class="project-modal__image" src="" alt="">
+      <h3 class="project-modal__title" id="project-modal-title"></h3>
+      <p class="project-modal__desc"></p>
+      <a class="project-modal__link" href="" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </div>
+</body>
+
 </html>
