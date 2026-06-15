@@ -9,13 +9,72 @@
 </head>
 
 <body class="page__body">
-  <header class="page__header">
-    <div class="page-header__wrapper"></div>
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <a class="page-header__logo logo">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="#" type="image/svg+xml" width="74" height="62">
+          <img class="logo__pic" src="#" alt="" width="27" height="27">
+        </picture>
+      </a>
+      <nav class="page-header__navigation page-nav">
+        <div class="page-nav__wrapper">
+          <button class="page-nav__toggle button-burger" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="page-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link">Мой путь</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link">Навыки</a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link">Проекты</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="site-list__link">Контакт</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="page-lang__wrapper">
+        <button class="page-lang__toggle">RU</button>
+        <button class="page-lang__toggle">ENG</button>
+      </div>
+    </div>
   </header>
 
   <main class="page-container">
     <section class="hero">
-      <div class="hero__wrapper"></div>
+      <a class="hero__wrapper">
+        <h2 class="hero__title">Привет! Я Злата и я начинающий frontend-разработчик</h2>
+        <ul class="hero__list qualities-list">
+          <li class="qualities-list__item">UI lover</li>
+          <li class="qualities-list__item">visual thinker</li>
+          <li class="qualities-list__item">creativity</li>
+          <li class="qualities-list__item">curiosity</li>
+        </ul>
+        <div class="hero-pic__wrapper">
+          <picture>
+            <source media="(min-width: 1440px)" width="503" height="370" type="image/webp" srcset="#">
+            <source media="(min-width: 768px)" width="708" height="609" type="image/webp" srcset="#">
+            <img class="hero__pic" src="#" srcset="#" alt="Профессиональное селфи" width="190" height="142">
+          </picture>
+        </div>
+        <a class="hero-link">
+          <span class="visually-hidden">Переход на GitHub</span>
+          <span class="hero-link__message">Клик!</span>
+          <img class="hero-link__pic" alt="GitHub-котик" width="95" height="95">
+        </a>
+        <ul class="hero-stack__list short-stack">
+          <li class="short-stack__item">HTML</li>
+          <li class="short-stack__item">CSS</li>
+          <li class="short-stack__item">JavaScript</li>
+          <li class="short-stack__item">Git</li>
+          <li class="short-stack__item">Figma</li>
+        </ul>
+        </div>
     </section>
 
     <section class="path">
