@@ -148,12 +148,89 @@
       </div>
     </section>
 
-    <section class="projects">
-      <div class="projects__wrapper"></div>
+    <section class="projects" aria-labelledby="projects-title">
+      <div class="projects__wrapper">
+        <h2 class="projects__title" id="projects-title">Проекты</h2>
+
+        <ol class="projects__list">
+          <li class="projects__item">
+            <h3>Первый одностраничник</h3>
+            <article class="project-card">
+              <button class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-1"></button>
+              <h4 class="preview__title">Sedona</h4>
+              <ul class="preview__stack-list stack-list">
+                <li class="stack-list__item">HTML</li>
+                <li class="stack-list__item">CSS</li>
+              </ul>
+
+              <ul class="preview__learned-list learned-list">
+                <li class="learned-list__item">Семантика HTML</li>
+                <li class="learned-list__item">Формы</li>
+                <li class="learned-list__item">Модальные окна</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="projects__item">
+            <h3>Знакомство с адаптивом + JS</h3>
+            <article class="project-card">
+              <button class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-1"></button>
+              <h4 class="preview__title">Cat Energy</h4>
+              <ul class="preview__stack-list stack-list">
+                <li class="stack-list__item">HTML</li>
+                <li class="stack-list__item">CSS</li>
+                <li class="stack-list__item">Gulp</li>
+              </ul>
+
+              <ul class="preview__learned-list learned-list">
+                <li class="learned-list__item">БЭМ</li>
+                <li class="learned-list__item">Адаптивная вёрстка</li>
+                <li class="learned-list__item">Gulp-сборка</li>
+              </ul>
+            </article>
+          </li>
+
+          <li class="projects__item">
+            <h3>Базовый JS</h3>
+            <article class="project-card">
+              <button class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-1"></button>
+              <h4 class="preview__title">Kekstagram</h4>
+              <ul class="preview__stack-list stack-list">
+                <li class="stack-list__item">HTML</li>
+                <li class="stack-list__item">CSS</li>
+                <li class="stack-list__item">JS</li>
+              </ul>
+
+              <ul class="preview__learned-list learned-list">
+                <li class="learned-list__item">Fetch API</li>
+                <li class="learned-list__item">ES modules</li>
+                <li class="learned-list__item">Валидация форм</li>
+              </ul>
+            </article>
+          </li>
+          <li class="projects__item">
+            <h3>Мы здесь</h3>
+          </li>
+        </ol>
+      </div>
     </section>
   </main>
 
-  <footer class="page__footer"></footer>
+  <footer class="page__footer">
+
+  </footer>
+
+  <!-- Модальное окно -->
+  <div class="project-modal hidden" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <div class="project-modal__inner">
+      <button class="project-modal__close" type="button">Закрыть</button>
+
+      <img class="project-modal__image" src="" alt="">
+      <h3 class="project-modal__title" id="project-modal-title"></h3>
+      <p class="project-modal__desc"></p>
+      <a class="project-modal__link" href="" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </div>
 </body>
 
 </html>
