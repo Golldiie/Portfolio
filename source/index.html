@@ -24,16 +24,16 @@
           </button>
           <ul class="page-nav__list nav-list">
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#">Мой путь</a>
+              <a class="nav-list__link" href="#path">Мой путь</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#">Навыки</a>
+              <a class="nav-list__link" href="#skills">Навыки</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#">Проекты</a>
+              <a class="nav-list__link" href="#projects">Проекты</a>
             </li>
             <li class="nav-list__item">
-              <a class="nav-list__link" href="#">Контакт</a>
+              <a class="nav-list__link" href="#contacts">Контакт</a>
             </li>
           </ul>
         </div>
@@ -53,18 +53,17 @@
         </ul>
         <div class="hero-pic__wrapper">
           <picture>
-            <source media="(min-width: 1440px)" width="503" height="370" type="image/webp" srcset="#">
-            <source media="(min-width: 768px)" width="708" height="609" type="image/webp" srcset="#">
-            <img class="hero__pic" src="#" srcset="#" alt="Профессиональное селфи" width="190" height="142">
+            <source media="(min-width: 1440px)" width="503" height="370" type="image/png" srcset="../../images/hero/my-photo--desktop.png">
+            <img class="hero__pic" src="../../images/hero/my-photo--mobile.png" alt="Профессиональное селфи" width="190" height="142">
           </picture>
         </div>
         <a class="hero-link" href="https://github.com/Golldiie">
           <span class="visually-hidden">Переход на GitHub</span>
-          <span class="hero-link__message hero-link__message--mobile">Клик!</span>
+          <span class="hero-link__message hero-link__message--mobile">Click me</span>
           <span class="hero-link__message hero-link__message--desktop">Счастливого путешествия на GitHub</span>
           <picture>
-            <source media="(min-width: 1440px)" width="503" height="370" type="image/webp" srcset="#">
-            <img class="hero-link__pic" alt="GitHub-котик" width="95" height="95">
+            <source media="(min-width: 1440px)" width="222" height="156" type="image/png" srcset="../../images/hero/cat-car.png">
+            <img class="hero-link__pic" src="../../images/hero/star-cat.png" alt="GitHub-котик" width="95" height="95">
           </picture>
         </a>
         <ul class="hero-stack__list short-stack">
@@ -77,7 +76,7 @@
         </div>
     </section>
 
-    <section class="path">
+    <section class="path" id="path">
       <div class="path__wrapper">
         <h2 class="path__title">Мой путь</h2>
         <div class="path-direction--short">
@@ -112,7 +111,7 @@
       </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
       <div class="skills__wrapper">
         <h2 class="skills__title">Навыки</h2>
         <ul class="skills-list">
@@ -144,7 +143,7 @@
       </div>
     </section>
 
-    <section class="projects" aria-labelledby="projects-title">
+    <section class="projects" id="projects" aria-labelledby="projects-title">
       <div class="projects__wrapper">
         <h2 class="projects__title" id="projects-title">Проекты</h2>
 
@@ -213,7 +212,7 @@
   </main>
 
   <footer class="page__footer">
-    <section class="contacts">
+    <section class="contacts" id="contacts">
       <h2 class="visually-hidden">Связаться со мной</h2>
       <div class="contacts__wrapper">
         <ul class="contacts__list">
