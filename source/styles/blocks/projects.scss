@@ -1,3 +1,25 @@
 .projects {
   background-color: $dark-cold;
 }
+
+.projects__title {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(2.25rem, 12vw, 4rem);
+  font-weight: 900;
+  color: $cold-secondary;
+  text-align: center;
+}
+
+.projects__list {
+  margin: 0;
+  list-style: none;
+}
+
+.projects__item-title {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(1rem, 12vw, 2.25rem);
+  font-weight: 700;
+  color: $light-text;
+}

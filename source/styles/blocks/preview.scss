@@ -1,0 +1,37 @@
+.preview {
+  background-color: $warm-primary;
+  border-radius: 14px;
+  box-shadow: 0 5px 6px rgba(74, 68, 65, 0.5);
+}
+
+.preview__title {
+  margin: 0;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 900;
+  color: $dark-text;
+}
+
+.preview__stack {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.preview__stack-item {
+  font-size: clamp(0.88rem, 5vw, 2.25rem);
+  font-weight: 600;
+  color: $light-text;
+  text-align: right;
+}
+
+.preview__learned-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.preview__learned-item {
+  font-size: clamp(0.88rem, 5vw, 2.25rem);
+  font-weight: 500;
+  color: $dark-text;
+}
