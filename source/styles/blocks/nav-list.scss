@@ -1,0 +1,30 @@
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list__link {
+  padding: 1rem;
+  display: block;
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $dark-text;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:focus {
+    outline: none;
+    border: 10px dashed $dark-cold;
+    border-radius: 14px;
+  }
+}

@@ -1,0 +1,40 @@
+.page-nav__toggle {
+  width: 17px;
+  height: 13px;
+  position: relative;
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 17px;
+    height: 1px;
+    background-color: $dark-text;
+
+    transition: transform 0.5s ease, top 0.5s ease, box-shadow 0.5s ease;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &::before {
+    top: 0;
+    box-shadow: 0 6px 0 $dark-text;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+}
+

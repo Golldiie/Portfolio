@@ -1,0 +1,62 @@
+.long-path__title {
+  margin: 0;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $cold-primary;
+}
+
+.long-path__button {
+  font-family: inherit;
+  font-size: 0.63rem;
+  font-weight: 900;
+  border: none;
+  cursor: pointer;
+}
+
+.long-path__text-button {
+  padding: 0.5rem 1.2rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: $dark-text;
+  background-color: $warm-primary;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  position: relative;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 5px 6px $dark-cold;
+
+  &:hover {
+    background-color: #b7898f;
+    box-shadow: none;
+  }
+
+  &:active + .long-path__text {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px dashed $dark-cold;
+    border-radius: 14px;
+    box-shadow: none;
+  }
+}
+
+.long-path__text {
+  margin: 0;
+  padding: 1.88rem 2.8rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: $light-text;
+  background-color: $warm-primary;
+  max-width: 50%;
+  opacity: 0;
+  border-radius: 14px;
+  position: absolute;
+  transform: translateY(-110%);
+  transition: transform 1s ease, opacity 0.2s ease;
+}

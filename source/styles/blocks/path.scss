@@ -1,0 +1,20 @@
+.path {
+  background-color: $cold-secondary;
+}
+
+.path__title {
+  margin: 0;
+  font-family: inherit;
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: $dark-warm;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $dark-warm;
+    filter: blur(0.4);
+  }
+}

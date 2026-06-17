@@ -1,0 +1,30 @@
+.contacts {
+  background-color: $warm-gray;
+}
+
+.contacts__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: clamp(20px, 10vw, 60px);
+}
+
+.contacts__link {
+  display: block;
+  width: clamp(38px, 12vw, 78px);
+  height: clamp(38px, 12vw, 78px);
+
+  &--vk {
+    background: url("../../images/footer/vk-icon.svg") no-repeat center / contain;
+  }
+
+  &--tg {
+    background: url("../../images/footer/tg-icon.svg") no-repeat center / contain;
+  }
+
+  &--github {
+    background: url("../../images/footer/github-icon.svg") no-repeat center / contain;
+  }
+}

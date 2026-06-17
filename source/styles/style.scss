@@ -1,0 +1,26 @@
+/* GLOBAL */
+@import "./global/variables.scss";
+@import "./global/mixins.scss";
+@import "./global/fonts.scss";
+@import "./global/global.scss";
+@import "./global/visually-hidden.scss";
+
+/* BLOCKS */
+@import "./blocks/page-header.scss";
+@import "./blocks/button-burger.scss";
+@import "./blocks/page-nav.scss";
+@import "./blocks/nav-list.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/hero-link.scss";
+@import "./blocks/qualities-list.scss";
+@import "./blocks/short-stack.scss";
+@import "./blocks/path.scss";
+@import "./blocks/short-path.scss";
+@import "./blocks/long-path.scss";
+@import "./blocks/tooltip.scss";
+@import "./blocks/skills.scss";
+@import "./blocks/stack-list.scss";
+@import "./blocks/projects.scss";
+@import "./blocks/project-card.scss";
+@import "./blocks/preview.scss";
+@import "./blocks/contacts.scss";

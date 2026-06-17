@@ -1,0 +1,52 @@
+.hero {
+  background-color: $dark-warm;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: $dark-text;
+}
+
+.hero__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hero-pic__wrapper {
+  position: relative;
+  display: inline-block;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 202px;
+    height: 154px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    border-radius: 14px;
+    background-color: $warm-gray;
+
+    @media (min-width: $tablet-width) {
+      width: 535px;
+      height: 402px;
+    }
+  }
+}
+
+.hero__pic {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-stack__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
