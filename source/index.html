@@ -41,30 +41,40 @@
   <main class="page-container">
     <section class="hero">
 
-      <div class="container">
+      <div class="hero__wrapper container">
         <h2 class="hero__title">Привет! Я Злата и я начинающий frontend-разработчик</h2>
-        <ul class="hero__list qualities-list">
-          <li class="qualities-list__item">UI lover</li>
-          <li class="qualities-list__item">visual thinker</li>
-          <li class="qualities-list__item">creativity</li>
-          <li class="qualities-list__item">curiosity</li>
-        </ul>
-        <div class="hero-pic__wrapper">
-          <picture>
-            <source media="(min-width: 1440px)" width="503" height="370" type="image/png" srcset="../../images/hero/my-photo--desktop.png">
-            <img class="hero__pic" src="../../images/hero/my-photo--mobile.png" alt="Профессиональное селфи" width="190" height="142">
-          </picture>
+        <div class="hero__visual">
+          <div class="hero-pic__wrapper">
+            <picture>
+              <source media="(min-width: 768px)" width="503" height="370" type="image/png" srcset="../../images/hero/my-photo--desktop.png">
+              <img class="hero__pic" src="../../images/hero/my-photo--mobile.png" alt="Профессиональное селфи" width="190" height="142">
+            </picture>
+          </div>
+
+          <ul class="hero__list qualities-list">
+            <li class="qualities-list__item">
+              <span class="qualities-list__text">UI lover</span>
+            </li>
+            <li class="qualities-list__item">
+              <span class="qualities-list__text">visual thinker</span>
+            </li>
+            <li class="qualities-list__item">
+              <span class="qualities-list__text">creativity</span>
+            </li>
+            <li class="qualities-list__item">
+              <span class="qualities-list__text">curiosity</span>
+            </li>
+          </ul>
         </div>
         <a class="hero-link" href="https://github.com/Golldiie">
           <span class="visually-hidden">Переход на GitHub</span>
-          <span class="hero-link__message hero-link__message--mobile">Click me</span>
-          <span class="hero-link__message hero-link__message--desktop">Счастливого путешествия на GitHub</span>
+          <span class="hero-link__message">Счастливого путешествия на GitHub</span>
           <picture>
             <source media="(min-width: 1440px)" width="222" height="156" type="image/png" srcset="../../images/hero/cat-car.png">
-            <img class="hero-link__pic" src="../../images/hero/star-cat.png" alt="GitHub-котик" width="95" height="95">
+            <img class="hero-link__pic" src="../../images/hero/star-cat.png" alt="GitHub-котик" width="55" height="60">
           </picture>
         </a>
-        <ul class="hero-stack__list short-stack">
+        <ul class="hero__stack-list short-stack">
           <li class="short-stack__item">HTML</li>
           <li class="short-stack__item">CSS</li>
           <li class="short-stack__item">JavaScript</li>
@@ -76,7 +86,7 @@
 
     <section class="path" id="path">
 
-      <div class="container">
+      <div class="path__wrapper container">
         <h2 class="path__title">Мой путь</h2>
         <div class="path__direction short-path">
           <h3 class="short-path__title">Короче</h3>

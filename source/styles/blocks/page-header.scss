@@ -6,12 +6,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  flex-wrap: wrap;
 }
 
 .page-header__logo {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  justify-self: center;
+}
+
+.page-header__navigation {
+  flex-grow: 1;
 }
