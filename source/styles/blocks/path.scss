@@ -3,7 +3,6 @@
 }
 
 .path__wrapper {
-  padding-block: clamp(1.5rem, 1rem + 3vw, 4rem);
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-areas:
@@ -15,7 +14,7 @@
 .path__title {
   margin: 0;
   font-family: inherit;
-  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 12vw, 4rem);
   font-weight: 900;
   color: $dark-warm;
   text-align: center;

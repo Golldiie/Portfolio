@@ -1,9 +1,23 @@
 .stack-list {
-  display: none;
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.5s ease;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: clamp(0.88rem, 1.5vw, 1.13rem);
+  color: $dark-text;
+  width: max-content;
+  z-index: 2;
 }
 
 .stack-list__item {
   font-family: inherit;
   font-size: 1rem;
+  margin: 0 auto;
 }

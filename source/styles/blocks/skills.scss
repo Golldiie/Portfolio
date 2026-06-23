@@ -2,47 +2,112 @@
   background-color: $cold-primary;
 }
 
-.skills__title {
-  margin: 0;
-  font-family: inherit;
-  font-size: 2.25rem;
-  font-weight: 900;
-  color: $dark-cold;
-}
-
 .skills__wrapper {
   background-image: url("../../images/skills/flower-pattern.svg");
   background-repeat: repeat;
   background-size: clamp(180px, 20vw, 280px);
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+  }
+}
+
+.skills__title {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(2.25rem, 12vw, 5rem);
+  font-weight: 900;
+  color: $dark-cold;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .skills__list {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+    min-height: calc(clamp(180px, 18vw, 280px) + 180px);
+  }
 }
 
 .skills__item {
   font-family: inherit;
-  font-size: 2.25rem;
-  width: clamp(56px, 12vw, 95px);
+  font-size: clamp(1rem, 12vw, 2.25rem);
+  width: clamp(120px, 12vw, 220px);
+  aspect-ratio: 1 / 1;
   font-weight: 600;
   color: $dark-text;
   position: relative;
   z-index: 1;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 
   &::before {
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     content: "";
-    width: clamp(120px, 12vw, 220px);
-    height: clamp(120px, 12vw, 220px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
     background: url("../../images/skills/flower.svg") no-repeat center / contain;
+    filter: drop-shadow(0 5px 6px rgba(74, 68, 65, 0.6));
+    transition: transform 0.7s cubic-bezier(0.17, 0.88, 0.32, 1.27);
+  }
+
+  &:is(:hover, :active, :focus)::before {
+    filter: none;
+  }
+
+  &:hover {
+    opacity: 1;
+    color: transparent;
+
+    &::before {
+      transform: scale(1.5);
+    }
+
+    .stack-list {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+.skills__list li:nth-child(1) {
+  @media (min-width: $tablet-width) {
+    align-self: start;
+  }
+}
+
+.skills__list li:nth-child(2) {
+  justify-self: end;
+
+  @media (min-width: $tablet-width) {
+    place-self: end center;
+  }
+}
+
+.skills__list li:nth-child(3) {
+  @media (min-width: $tablet-width) {
+    justify-self: end;
   }
 }
