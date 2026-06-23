@@ -5,6 +5,10 @@
   <meta charset="UTF-8">
   <title>Портфолио</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -66,6 +70,7 @@
             </li>
           </ul>
         </div>
+
         <a class="hero-link" href="https://github.com/Golldiie">
           <span class="visually-hidden">Переход на GitHub</span>
           <span class="hero-link__message">Счастливого путешествия на GitHub</span>
@@ -88,7 +93,7 @@
 
       <div class="path__wrapper container">
         <h2 class="path__title">Мой путь</h2>
-        <div class="path__direction short-path">
+        <div class="path__direction path__direction--short short-path">
           <h3 class="short-path__title">Короче</h3>
           <ol class="short-path__list">
             <li class="short-path__item">Tilda 11 класс</li>
@@ -97,12 +102,9 @@
             <li class="short-path__item">Пет-проектики</li>
           </ol>
         </div>
-        <div class="path__direction long-path">
-          <h3 class="long-path__title">Длиннее</h3>
-          <button class="long-path__button tooltip" type="button">i
-            <span class="tooltip__message">Внимание! Длинный текст</span>
-          </button>
-          <div class="long-path__text-wrapper">
+        <div class="path__direction path__direction--long long-path">
+          <div class="long-path__wrapper">
+            <h3 class="long-path__title">Длиннее</h3>
             <button class="long-path__text-button" type="button">Погрузиться</button>
             <p class="long-path__text">
               Всё началось со школы. На уроках информатики нас начали знакомить с вёрсткой сайтов.
@@ -263,6 +265,7 @@
       <a class="project-modal__link" href="" target="_blank" rel="noreferrer">GitHub</a>
     </div>
   </div>
+  <script src="scripts/main.js" defer></script>
 </body>
 
 </html>

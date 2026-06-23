@@ -68,6 +68,8 @@
   padding: 0;
   list-style: none;
   position: relative;
+  max-width: 90%;
   display: flex;
-  gap: clamp(0.75rem, 2vw, 1.5rem);
+  justify-content: center;
+  gap: clamp(0.38rem, 2vw, 1.5rem);
 }

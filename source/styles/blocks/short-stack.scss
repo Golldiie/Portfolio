@@ -4,13 +4,13 @@
   color: $dark-text;
   display: flex;
   align-items: center;
-  gap: clamp(0.75rem, 2vw, 1.5rem);
 
   &::after {
     content: "";
-    display: block;
     width: 5px;
     height: 5px;
+    margin-left: clamp(0.38rem, 2vw, 1.5rem);
+
     background-color: $dark-text;
     border-radius: 50%;
   }
