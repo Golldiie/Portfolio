@@ -2,19 +2,40 @@
   background-color: $warm-gray;
 }
 
+.contacts__wrapper {
+  padding-block: clamp(0.5rem, 1vw, 1rem);
+}
+
 .contacts__list {
   margin: 0;
   padding: 0;
   display: flex;
   list-style: none;
+  align-items: center;
   justify-content: center;
-  gap: clamp(20px, 10vw, 60px);
+  gap: clamp(16px, 3.93vw + 3.4px, 60px);
 }
 
 .contacts__link {
   display: block;
-  width: clamp(38px, 12vw, 78px);
-  height: clamp(38px, 12vw, 78px);
+  width: clamp(32px, 4.11vw + 18.8px, 78px);
+  height: clamp(32px, 4.11vw + 18.8px, 78px);
+  padding: clamp(4px, 1vw, 12px);
+  transition: opacity 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border: 10px dashed $dark-cold;
+    border-radius: 14px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--vk {
     background: url("../../images/footer/vk-icon.svg") no-repeat center / contain;
