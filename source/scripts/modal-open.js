@@ -1,32 +1,33 @@
+import { PROJECTS } from './project-data.js';
+import { openModal, closeModal } from './helpers.js';
+import { fillModal } from './modal-content.js';
+
 const body = document.body;
 const modal = document.querySelector('.project-modal');
-const closeButton = modal?.querySelector('.project-modal__close');
+const closeButton = modal.querySelector('.project-modal__close');
 const projects = document.querySelectorAll('.project-card__preview');
-
-function openModal(){
-  modal.classList.remove('visually-hidden');
-  body.classList.add('modal-open');
-  closeButton.focus();
-}
-
-function closeModal(){
-  modal.classList.add('visually-hidden');
-  body.classList.remove('modal-open');
-}
 
 function onDocumentKeydown(evt){
   if (evt.key === 'Escape' && !modal.classList.contains('visually-hidden')) {
     evt.preventDefault();
-    closeModal();
+    closeModal(modal, body);
   }
+}
+
+function showProject(project) {
+  fillModal(project);
+  openModal(modal, body);
 }
 
 document.addEventListener('keydown', onDocumentKeydown);
 
-projects.forEach((project) => project.addEventListener('click', openModal));
+projects.forEach((projectButton) => projectButton.addEventListener('click', (evt) => {
+  const projectId = evt.currentTarget.dataset.project;
+  showProject(PROJECTS[projectId]);
+}));
 
 closeButton.addEventListener('click', () => {
-  closeModal();
+  closeModal(modal, body);
   document.removeEventListener('keydown', onDocumentKeydown);
 });
 

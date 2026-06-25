@@ -163,7 +163,7 @@
             <h3 class="projects__item-title">Погружение в правила вёрстки</h3>
             <div class="project-card">
 
-              <article class="project-card__preview preview" data-modal="project-modal-1" tabindex="0">
+              <article class="project-card__preview preview" data-project="project1" tabindex="0">
                 <h4 class="preview__title">Sedona</h4>
                 <ul class="preview__stack">
                   <li class="preview__stack-item">HTML</li>
@@ -183,7 +183,7 @@
             <h3 class="projects__item-title">Знакомство с адаптивом + JS</h3>
             <div class="project-card">
 
-              <article class="project-card__preview preview" data-modal="project-modal-2" tabindex="0">
+              <article class="project-card__preview preview" data-project="project2" tabindex="0">
                 <h4 class="preview__title">Cat Energy</h4>
                 <ul class="preview__stack">
                   <li class="preview__stack-item">HTML</li>
@@ -204,7 +204,7 @@
             <h3 class="projects__item-title">Базовый JS</h3>
             <div class="project-card">
 
-              <article class="project-card__preview preview" data-modal="project-modal-3" tabindex="0">
+              <article class="project-card__preview preview" data-project="project3" tabindex="0">
                 <h4 class="preview__title">Kekstagram</h4>
                 <ul class="preview__stack">
                   <li class="preview__stack-item">HTML</li>
@@ -256,14 +256,29 @@
   </footer>
 
   <!-- Модальное окно -->
-  <div class="project-modal " role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+  <div class="project-modal visually-hidden" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
     <div class="project-modal__inner">
-      <button class="project-modal__close" type="button">Закрыть</button>
-
+      <button class="project-modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <h3 class="project-modal__title">Название проекта</h3>
       <img class="project-modal__image" src="" alt="">
-      <h3 class="project-modal__title" id="project-modal-title"></h3>
-      <p class="project-modal__desc"></p>
-      <a class="project-modal__link" href="" target="_blank" rel="noreferrer">GitHub</a>
+      <h4 class="project-modal__desc-title">Самое интересное</h4>
+      <p class="project-modal__description">Многа всяких штук</p>
+
+      <h4 class="project-modal__desc-title">Что реализовано</h4>
+      <ul class="project-modal__list" id="results">
+        <li class="project-modal__item"></li>
+      </ul>
+
+      <h4 class="project-modal__desc-title">Челленджи</h4>
+      <ul class="project-modal__list" id="challenges">
+        <li class="project-modal__item"></li>
+      </ul>
+      <div class="project-modal__link-wrapper">
+        <a class="project-modal__link" id="github" href="" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="project-modal__link" id="preview" href="" target="_blank" rel="noreferrer">Preview</a>
+      </div>
     </div>
   </div>
   <script src="scripts/main.js" defer></script>
