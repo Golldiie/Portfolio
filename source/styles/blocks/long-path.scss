@@ -81,6 +81,7 @@
   font-size: clamp(0.7rem, 0.65rem + 0.3vw, 0.85rem);
   width: clamp(260px, 60vw, 600px);
   height: auto;
+  z-index: 3;
 
   @media (min-width: $tablet-width) {
     transform: translate(-100%, 0) scale(0.95);

@@ -2,6 +2,16 @@
   background-color: $warm-primary;
   border-radius: 14px;
   box-shadow: 0 5px 6px rgba(74, 68, 65, 0.5);
+
+  &:is(:hover, :active, :focus) {
+    box-shadow: none;
+  }
+
+  &:focus {
+    outline: none;
+    border: 10px dashed $dark-cold;
+    border-radius: 14px;
+  }
 }
 
 .preview__title {
@@ -9,12 +19,25 @@
   font-size: clamp(1.5rem, 5vw, 3rem);
   font-weight: 900;
   color: $dark-text;
+
+  grid-area: title;
+  line-height: 1.1;
 }
 
 .preview__stack {
+  grid-area: stack;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  place-self: start end;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0;
+
+  color: $light-text;
 }
 
 .preview__stack-item {
@@ -22,16 +45,27 @@
   font-weight: 600;
   color: $light-text;
   text-align: right;
+  line-height: 1.2;
+  white-space: nowrap;
+
+  &:not(:last-child)::after {
+    content: " •";
+  }
 }
 
 .preview__learned-list {
+  grid-area: learned;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  display: grid;
+  gap: clamp(0.2rem, 0.5vw, 0.4rem);
 }
 
 .preview__learned-item {
   font-size: clamp(0.88rem, 5vw, 2.25rem);
   font-weight: 500;
   color: $dark-text;
+  line-height: 1.25;
 }

@@ -161,9 +161,9 @@
         <ol class="projects__list">
           <li class="projects__item">
             <h3 class="projects__item-title">Погружение в правила вёрстки</h3>
-            <article class="project-card">
+            <div class="project-card">
 
-              <div class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-1">
+              <article class="project-card__preview preview" data-modal="project-modal-1" tabindex="0">
                 <h4 class="preview__title">Sedona</h4>
                 <ul class="preview__stack">
                   <li class="preview__stack-item">HTML</li>
@@ -175,15 +175,15 @@
                   <li class="preview__learned-item">Формы</li>
                   <li class="preview__learned-item">Модальные окна</li>
                 </ul>
-              </div>
-            </article>
+              </article>
+            </div>
           </li>
 
           <li class="projects__item">
             <h3 class="projects__item-title">Знакомство с адаптивом + JS</h3>
-            <article class="project-card">
+            <div class="project-card">
 
-              <div class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-2">
+              <article class="project-card__preview preview" data-modal="project-modal-2" tabindex="0">
                 <h4 class="preview__title">Cat Energy</h4>
                 <ul class="preview__stack">
                   <li class="preview__stack-item">HTML</li>
@@ -196,15 +196,15 @@
                   <li class="preview__learned-item">Адаптивная вёрстка</li>
                   <li class="preview__learned-item">Gulp-сборка</li>
                 </ul>
-              </div>
-            </article>
+              </article>
+            </div>
           </li>
 
           <li class="projects__item">
             <h3 class="projects__item-title">Базовый JS</h3>
-            <article class="project-card">
+            <div class="project-card">
 
-              <div class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-3">
+              <article class="project-card__preview preview" data-modal="project-modal-3" tabindex="0">
                 <h4 class="preview__title">Kekstagram</h4>
                 <ul class="preview__stack">
                   <li class="preview__stack-item">HTML</li>
@@ -217,9 +217,10 @@
                   <li class="preview__learned-item">ES modules</li>
                   <li class="preview__learned-item">Валидация форм</li>
                 </ul>
-              </div>
-            </article>
+              </article>
+            </div>
           </li>
+
           <li class="projects__item">
             <h3 class="projects__item-title">Мы здесь</h3>
           </li>
@@ -255,7 +256,7 @@
   </footer>
 
   <!-- Модальное окно -->
-  <div class="project-modal visually-hidden" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+  <div class="project-modal " role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
     <div class="project-modal__inner">
       <button class="project-modal__close" type="button">Закрыть</button>
 

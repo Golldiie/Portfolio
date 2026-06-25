@@ -11,3 +11,4 @@ function hideText() {
 }
 
 document.addEventListener('click', hideText);
+
