@@ -1,19 +1,72 @@
 .qualities-list__item {
+  position: absolute;
+  width: clamp(4.5rem, 8vw, 5.6rem);
+  aspect-ratio: 1;
+  color: #161414;
   font-family: inherit;
   font-size: 0.88rem;
-  color: $dark-text;
+  font-weight: 600;
 
   &::before {
-    display: block;
     content: "";
-    width: 70px;
-    height: 70px;
-    background: url("../../images/hero/star.svg") no-repeat center / contain;
+    position: absolute;
+    inset: 0;
+    background: url("../../images/hero/star.svg") center / contain no-repeat;
     transition: filter 0.2s ease;
   }
 
-  &:hover::before {
-    filter: drop-shadow(3px 3px 4px rgba(74, 68, 65, 0.5));
+  @media (min-width: $tablet-width) {
+    width: clamp(5.5rem, 7vw, 6.5rem);
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 7rem;
+  }
+}
+
+.qualities-list__text {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.qualities-list__item:nth-child(1) {
+  top: 1rem;
+  left: 0;
+
+  @media (min-width: $tablet-width) {
+    top: 0.5rem;
+  }
+}
+
+.qualities-list__item:nth-child(2) {
+  top: 1rem;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    top: 0.5rem;
+  }
+}
+
+.qualities-list__item:nth-child(3) {
+  bottom: 1rem;
+  left: 0;
+
+  @media (min-width: $tablet-width) {
+    bottom: 0.5rem;
+  }
+}
+
+.qualities-list__item:nth-child(4) {
+  bottom: 1rem;
+  right: 0;
+
+  @media (min-width: $tablet-width) {
+    bottom: 0.5rem;
   }
 }
 

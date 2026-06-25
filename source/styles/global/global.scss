@@ -1,4 +1,5 @@
 html {
+  height: 100%;
   font-size: 16px;
   scroll-behavior: smooth;
 }
@@ -6,6 +7,14 @@ html {
 body {
   font-family: $Inter;
   font-size: 0.88rem;
+  color: $dark-text;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+body.modal-open {
+  overflow: hidden;
 }

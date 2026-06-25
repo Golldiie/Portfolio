@@ -12,14 +12,55 @@
 }
 
 .projects__list {
+  --line-x: clamp(0.85rem, 1.8vw, 1.2rem);
+  --dot-size: clamp(0.95rem, 2.7vw, 1.5rem);
+  --content-offset: clamp(2.2rem, 4.5vw, 4.5rem);
+
+  position: relative;
   margin: 0;
+  padding: 0;
   list-style: none;
+
+  display: grid;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(var(--line-x) + var(--dot-size) / 2);
+    width: 2px;
+    transform: translateX(-50%);
+    background-color: $dark-warm;
+  }
+}
+
+.projects__item {
+  position: relative;
+  padding-left: var(--content-offset);
+
+  display: grid;
+  gap: clamp(0.6rem, 1.3vw, 1rem);
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: var(--line-x);
+    top: clamp(0.15rem, 0.5vw, 0.5rem);
+    width: var(--dot-size);
+    height: var(--dot-size);
+    border-radius: 50%;
+    background-color: $warm-gray;
+    z-index: 1;
+  }
 }
 
 .projects__item-title {
   margin: 0;
   font-family: inherit;
-  font-size: clamp(1rem, 12vw, 2.25rem);
+  font-size: clamp(1rem, 2.2vw, 1.75rem);
   font-weight: 700;
   color: $light-text;
+  line-height: 1.15;
 }

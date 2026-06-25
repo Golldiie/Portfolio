@@ -1,3 +1,19 @@
 .page-header {
   background-color: $warm-gray;
 }
+
+.page-header__wrapper {
+  padding-block: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page-header__logo {
+  justify-self: center;
+}
+
+.page-header__navigation {
+  flex-grow: 1;
+}

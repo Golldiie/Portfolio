@@ -1,1 +1,27 @@
-//hjhf
+.project-card__preview {
+  border: 0;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+
+  padding: clamp(0.9rem, 2.2vw, 1.5rem);
+  border-radius: clamp(0.8rem, 1.5vw, 1rem);
+  background-color: $warm-primary;
+  box-shadow: 0 5px 6px rgba(74, 68, 65, 0.5);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "stack"
+    "learned";
+  gap: clamp(0.4rem, 1vw, 0.75rem) clamp(0.75rem, 2vw, 1.5rem);
+
+  @media (min-width: $tablet-width) {
+    gap: clamp(1.88rem, 1.63rem + 1.25vw, 2.63rem) clamp(0.75rem, 2vw, 1.5rem);
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "title   title"
+      "learned stack";
+  }
+}

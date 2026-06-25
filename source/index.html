@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <title>Портфолио</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="favicons/apple-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <div class="page-header__wrapper">
+    <div class="page-header__wrapper container">
       <a class="page-header__logo logo">
         <picture>
           <source media="(min-width: 1440px)" srcset="../../images/header/logo.svg" type="image/svg+xml" width="74" height="62">
@@ -19,9 +23,6 @@
       </a>
       <nav class="page-header__navigation page-nav">
         <div class="page-nav__wrapper">
-          <button class="page-nav__toggle button-burger" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
           <ul class="page-nav__list nav-list">
             <li class="nav-list__item">
               <a class="nav-list__link" href="#path">Мой путь</a>
@@ -43,43 +44,56 @@
 
   <main class="page-container">
     <section class="hero">
-      <a class="hero__wrapper">
+
+      <div class="hero__wrapper container">
         <h2 class="hero__title">Привет! Я Злата и я начинающий frontend-разработчик</h2>
-        <ul class="hero__list qualities-list">
-          <li class="qualities-list__item">UI lover</li>
-          <li class="qualities-list__item">visual thinker</li>
-          <li class="qualities-list__item">creativity</li>
-          <li class="qualities-list__item">curiosity</li>
-        </ul>
-        <div class="hero-pic__wrapper">
-          <picture>
-            <source media="(min-width: 1440px)" width="503" height="370" type="image/png" srcset="../../images/hero/my-photo--desktop.png">
-            <img class="hero__pic" src="../../images/hero/my-photo--mobile.png" alt="Профессиональное селфи" width="190" height="142">
-          </picture>
+        <div class="hero__visual">
+          <div class="hero-pic__wrapper">
+            <picture>
+              <source media="(min-width: 768px)" width="503" height="370" type="image/png" srcset="../../images/hero/my-photo--desktop.png">
+              <img class="hero__pic" src="../../images/hero/my-photo--mobile.png" alt="Профессиональное селфи" width="190" height="142">
+            </picture>
+          </div>
+
+          <ul class="hero__list qualities-list">
+            <li class="qualities-list__item">
+              <span class="qualities-list__text">UI lover</span>
+            </li>
+            <li class="qualities-list__item">
+              <span class="qualities-list__text">visual thinker</span>
+            </li>
+            <li class="qualities-list__item">
+              <span class="qualities-list__text">creativity</span>
+            </li>
+            <li class="qualities-list__item">
+              <span class="qualities-list__text">curiosity</span>
+            </li>
+          </ul>
         </div>
+
         <a class="hero-link" href="https://github.com/Golldiie">
           <span class="visually-hidden">Переход на GitHub</span>
-          <span class="hero-link__message hero-link__message--mobile">Click me</span>
-          <span class="hero-link__message hero-link__message--desktop">Счастливого путешествия на GitHub</span>
+          <span class="hero-link__message">Счастливого путешествия на GitHub</span>
           <picture>
             <source media="(min-width: 1440px)" width="222" height="156" type="image/png" srcset="../../images/hero/cat-car.png">
-            <img class="hero-link__pic" src="../../images/hero/star-cat.png" alt="GitHub-котик" width="95" height="95">
+            <img class="hero-link__pic" src="../../images/hero/star-cat.png" alt="GitHub-котик" width="55" height="60">
           </picture>
         </a>
-        <ul class="hero-stack__list short-stack">
+        <ul class="hero__stack-list short-stack">
           <li class="short-stack__item">HTML</li>
           <li class="short-stack__item">CSS</li>
           <li class="short-stack__item">JavaScript</li>
           <li class="short-stack__item">Git</li>
           <li class="short-stack__item">Figma</li>
         </ul>
-        </div>
+      </div>
     </section>
 
     <section class="path" id="path">
-      <div class="path__wrapper">
+
+      <div class="path__wrapper container">
         <h2 class="path__title">Мой путь</h2>
-        <div class="path__direction short-path">
+        <div class="path__direction path__direction--short short-path">
           <h3 class="short-path__title">Короче</h3>
           <ol class="short-path__list">
             <li class="short-path__item">Tilda 11 класс</li>
@@ -88,12 +102,9 @@
             <li class="short-path__item">Пет-проектики</li>
           </ol>
         </div>
-        <div class="path__direction long-path">
-          <h3 class="long-path__title">Длиннее</h3>
-          <button class="long-path__button tooltip" type="button">i
-            <span class="tooltip__message">Внимание! Длинный текст</span>
-          </button>
-          <div class="long-path__text-wrapper">
+        <div class="path__direction path__direction--long long-path">
+          <div class="long-path__wrapper">
+            <h3 class="long-path__title">Длиннее</h3>
             <button class="long-path__text-button" type="button">Погрузиться</button>
             <p class="long-path__text">
               Всё началось со школы. На уроках информатики нас начали знакомить с вёрсткой сайтов.
@@ -111,10 +122,11 @@
     </section>
 
     <section class="skills" id="skills">
-      <div class="skills__wrapper">
+
+      <div class="skills__wrapper container">
         <h2 class="skills__title">Навыки</h2>
         <ul class="skills__list">
-          <li class="skills__item">JS
+          <li class="skills__item" role="button" tabindex="0">JS
             <ul class="stack-list">
               <li class="stack-list__item">DOM</li>
               <li class="stack-list__item">API</li>
@@ -123,14 +135,14 @@
               <li class="stack-list__item">ES6+</li>
             </ul>
           </li>
-          <li class="skills__item">HTML
+          <li class="skills__item" role="button" tabindex="0">HTML
             <ul class="stack-list">
               <li class="stack-list__item">Semantics</li>
               <li class="stack-list__item">Accessibility</li>
               <li class="stack-list__item">Forms</li>
             </ul>
           </li>
-          <li class="skills__item">CSS
+          <li class="skills__item" role="button" tabindex="0">CSS
             <ul class="stack-list">
               <li class="stack-list__item">SASS</li>
               <li class="stack-list__item">Flexbox</li>
@@ -143,15 +155,15 @@
     </section>
 
     <section class="projects" id="projects" aria-labelledby="projects-title">
-      <h2 class="projects__title" id="projects-title">Проекты</h2>
-      <div class="projects__wrapper">
 
+      <div class="container">
+        <h2 class="projects__title" id="projects-title">Проекты</h2>
         <ol class="projects__list">
           <li class="projects__item">
             <h3 class="projects__item-title">Погружение в правила вёрстки</h3>
-            <article class="project-card">
+            <div class="project-card">
 
-              <div class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-1">
+              <article class="project-card__preview preview" data-project="project1" tabindex="0">
                 <h4 class="preview__title">Sedona</h4>
                 <ul class="preview__stack">
                   <li class="preview__stack-item">HTML</li>
@@ -163,15 +175,15 @@
                   <li class="preview__learned-item">Формы</li>
                   <li class="preview__learned-item">Модальные окна</li>
                 </ul>
-              </div>
-            </article>
+              </article>
+            </div>
           </li>
 
           <li class="projects__item">
             <h3 class="projects__item-title">Знакомство с адаптивом + JS</h3>
-            <article class="project-card">
+            <div class="project-card">
 
-              <div class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-2">
+              <article class="project-card__preview preview" data-project="project2" tabindex="0">
                 <h4 class="preview__title">Cat Energy</h4>
                 <ul class="preview__stack">
                   <li class="preview__stack-item">HTML</li>
@@ -184,15 +196,15 @@
                   <li class="preview__learned-item">Адаптивная вёрстка</li>
                   <li class="preview__learned-item">Gulp-сборка</li>
                 </ul>
-              </div>
-            </article>
+              </article>
+            </div>
           </li>
 
           <li class="projects__item">
             <h3 class="projects__item-title">Базовый JS</h3>
-            <article class="project-card">
+            <div class="project-card">
 
-              <div class="project-card__preview preview" type="button" aria-haspopup="dialog" aria-controls="project-modal-3">
+              <article class="project-card__preview preview" data-project="project3" tabindex="0">
                 <h4 class="preview__title">Kekstagram</h4>
                 <ul class="preview__stack">
                   <li class="preview__stack-item">HTML</li>
@@ -205,9 +217,10 @@
                   <li class="preview__learned-item">ES modules</li>
                   <li class="preview__learned-item">Валидация форм</li>
                 </ul>
-              </div>
-            </article>
+              </article>
+            </div>
           </li>
+
           <li class="projects__item">
             <h3 class="projects__item-title">Мы здесь</h3>
           </li>
@@ -219,7 +232,8 @@
   <footer class="page__footer">
     <section class="contacts" id="contacts">
       <h2 class="visually-hidden">Связаться со мной</h2>
-      <div class="contacts__wrapper">
+
+      <div class="contacts__wrapper container">
         <ul class="contacts__list">
           <li class="contacts__item">
             <a class="contacts__link contacts__link--vk" href="https://vk.com/zzm00n">
@@ -244,14 +258,30 @@
   <!-- Модальное окно -->
   <div class="project-modal visually-hidden" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
     <div class="project-modal__inner">
-      <button class="project-modal__close" type="button">Закрыть</button>
-
+      <button class="project-modal__close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <h3 class="project-modal__title">Название проекта</h3>
       <img class="project-modal__image" src="" alt="">
-      <h3 class="project-modal__title" id="project-modal-title"></h3>
-      <p class="project-modal__desc"></p>
-      <a class="project-modal__link" href="" target="_blank" rel="noreferrer">GitHub</a>
+      <h4 class="project-modal__desc-title">Самое интересное</h4>
+      <p class="project-modal__description">Многа всяких штук</p>
+
+      <h4 class="project-modal__desc-title">Что реализовано</h4>
+      <ul class="project-modal__list" id="results">
+        <li class="project-modal__item"></li>
+      </ul>
+
+      <h4 class="project-modal__desc-title">Челленджи</h4>
+      <ul class="project-modal__list" id="challenges">
+        <li class="project-modal__item"></li>
+      </ul>
+      <div class="project-modal__link-wrapper">
+        <a class="project-modal__link" id="github" href="" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="project-modal__link" id="preview" href="" target="_blank" rel="noreferrer">Preview</a>
+      </div>
     </div>
   </div>
+  <script src="scripts/main.js" defer></script>
 </body>
 
 </html>

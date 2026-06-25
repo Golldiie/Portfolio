@@ -1,5 +1,23 @@
 .short-stack__item {
   font-family: inherit;
-  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.5rem + 2vw, 1.5rem);
   color: $dark-text;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    margin-left: clamp(0.38rem, 2vw, 1.5rem);
+
+    background-color: $dark-text;
+    border-radius: 50%;
+  }
+}
+
+.short-stack li:last-of-type {
+  &::after {
+    display: none;
+  }
 }

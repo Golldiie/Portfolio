@@ -1,16 +1,23 @@
 .hero-link {
-  display: block;
-  font-family: inherit;
-  color: $dark-text;
-  font-size: 1.5rem;
-  width: 222px;
-  height: 156px;
-  font-weight: 900;
-  text-decoration: none;
+  padding: clamp(4px, 1vw, 12px);
   position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 5px 6px rgba(74, 68, 65, 0.6));
 
-  &:is(:hover, :active, :focus) .hero-link__message--desktop {
+  &:is(:hover, :active, :focus)::before {
+    filter: none;
+  }
+
+  &:is(:hover, :active, :focus) .hero-link__message {
     opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+    border: 10px dashed $cold-secondary;
+    border-radius: 14px;
   }
 }
 
@@ -18,35 +25,37 @@
 
 .hero-link__message {
   display: inline-block;
-  max-width: 50%;
   padding: 0.5rem 0.88rem;
   position: absolute;
-  top: 0;
+  z-index: 3;
+  bottom: calc(100% + 12px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: 220px;
   box-shadow: 3px 3px 4px rgba(74, 68, 65, 0.5);
+  color: $dark-text;
+  font-weight: 900;
+  text-decoration: none;
+  text-align: center;
   font-size: 0.88rem;
   line-height: 1.4;
-  word-wrap: break-word;
   background-color: $warm-secondary;
   border: 1px solid $dark-warm;
   border-radius: 50px;
   opacity: 0;
   transition: opacity 0.2s ease;
 
+
   &::after {
-    display: block;
     content: "";
     position: absolute;
-    bottom: -9px;
-    right: 20px;
-    width: 15px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
     height: 10px;
     background: $warm-secondary;
-    clip-path: polygon(0 0, 100% 0, 5% 100%);
-  }
-
-  &--mobile {
-    @media (min-width: $mobile-width-only) {
-      display: none;
-    }
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
   }
 }
