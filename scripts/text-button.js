@@ -1,0 +1,1 @@
+var n=document.querySelector(".long-path__text-button"),t=document.querySelector(".long-path__wrapper");n.addEventListener("click",e=>{e.stopPropagation(),t.classList.add("is-open")});function o(){t.classList.remove("is-open")}document.addEventListener("click",o);
